@@ -7,6 +7,9 @@ By 4 hours in, please feel free to stop working and explain what refactors / cod
 
 If you have any questions at any point, please reach us on email.
 
+## Note
+Pleae make your changes as small and `atomic` so that we can track and follow your peogress. A single commit for the solution will not be accepted.
+
 ## Submission
 Please **fork** this repository and commit all your changes to it. When you're done, send us the email with your Github repository URL.
 
