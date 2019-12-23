@@ -21,6 +21,6 @@ Please **fork** this repository and commit all your changes to it. When you're d
 	- Connect to the [Github API](http://developer.github.com/)
 	- Find the [rails/rails](http://github.com/rails/rails) repository
 	- Find the most recent commits (choose at least 25 or more of the commits)
-	- Create a RecyclerView that displays the recent commits by author in a view. 
+	- Create a TableView that displays the recent commits by author in a view. 
 	- [Click here](example.jpg) for a screenshot mock up of what the final product should look like
 4. Commit and Push your code to your forked repository
