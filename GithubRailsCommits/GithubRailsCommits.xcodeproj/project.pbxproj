@@ -24,6 +24,8 @@
 		94A0FD8823D5FF2000D18353 /* URLParameretersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8723D5FF2000D18353 /* URLParameretersEncoder.swift */; };
 		94A0FD8A23D5FF3800D18353 /* JSONParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8923D5FF3800D18353 /* JSONParametersEncoder.swift */; };
 		94A0FD8C23D5FF5800D18353 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8B23D5FF5800D18353 /* HTTPMethod.swift */; };
+		94A0FD8E23D6031300D18353 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8D23D6031300D18353 /* View.swift */; };
+		94A0FD9023D604AE00D18353 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8F23D604AE00D18353 /* NiblessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		94A0FD8723D5FF2000D18353 /* URLParameretersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameretersEncoder.swift; sourceTree = "<group>"; };
 		94A0FD8923D5FF3800D18353 /* JSONParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParametersEncoder.swift; sourceTree = "<group>"; };
 		94A0FD8B23D5FF5800D18353 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		94A0FD8D23D6031300D18353 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		94A0FD8F23D604AE00D18353 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				94A0FD7723D5EAFA00D18353 /* Cell */,
 				94A0FD5D23D5E00D00D18353 /* ViewController.swift */,
+				94A0FD8D23D6031300D18353 /* View.swift */,
+				94A0FD8F23D604AE00D18353 /* NiblessViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			files = (
 				94A0FD7023D5E99A00D18353 /* Model.swift in Sources */,
 				94A0FD5E23D5E00D00D18353 /* ViewController.swift in Sources */,
+				94A0FD8E23D6031300D18353 /* View.swift in Sources */,
 				94A0FD8C23D5FF5800D18353 /* HTTPMethod.swift in Sources */,
 				94A0FD7E23D5FAAA00D18353 /* NetworkRequest.swift in Sources */,
+				94A0FD9023D604AE00D18353 /* NiblessViewController.swift in Sources */,
 				94A0FD8123D5FD5600D18353 /* GithubRequest.swift in Sources */,
 				94A0FD5A23D5E00D00D18353 /* AppDelegate.swift in Sources */,
 				94A0FD8823D5FF2000D18353 /* URLParameretersEncoder.swift in Sources */,

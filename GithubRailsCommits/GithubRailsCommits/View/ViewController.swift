@@ -8,9 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+class ViewController: NiblessViewController<View> {
 
     let githubRequest = GithubRequest()
 
@@ -18,10 +16,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.refreshControl = UIRefreshControl()
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.refreshControl?.addTarget(self, action: #selector(refreshControlValueChanged), for: .valueChanged)
+        customView.dataSource = self
+        customView.refreshControl?.addTarget(self, action: #selector(refreshControlValueChanged), for: .valueChanged)
         fetchCommits()
     }
 
@@ -31,19 +27,19 @@ class ViewController: UIViewController {
     }
 
     func fetchCommits() {
-        
-        tableView.refreshControl?.beginRefreshing()
+
+        customView.refreshControl?.beginRefreshing()
 
         githubRequest.fetchRailsCommits {[weak self] commits, errorMessage in
-            self?.tableView.refreshControl?.endRefreshing()
+            self?.customView.refreshControl?.endRefreshing()
 
             guard let commits = commits else {
-                self?.setAlert(title: "Response Error", message: errorMessage)
+                self?.setAlert(title: "Error", message: errorMessage)
                 return
             }
 
             self?.commits = commits
-            self?.tableView.reloadData()
+            self?.customView.reloadData()
         }
     }
 }
