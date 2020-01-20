@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TableViewCell.swift
 //  GithubRailsCommits
 //
 //  Created by Afees Lawal on 20/01/2020.
@@ -7,17 +7,6 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-}
-
 
 final class TableViewCell: UITableViewCell {
 

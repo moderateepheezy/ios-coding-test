@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  String+Extensions.swift
 //  GithubRailsCommits
 //
 //  Created by Afees Lawal on 20/01/2020.
