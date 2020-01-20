@@ -63,6 +63,11 @@ final class TableViewCell: UITableViewCell {
         ])
     }
 
-    func feed(commit: String) {
+    func feed(commit: Commit) {
+        let attributedText = NSMutableAttributedString()
+        attributedText
+            .append(commit.detail.author.name, font: .systemFont(ofSize: 18, weight: .bold), textColor: .darkGray)
+            .append(commit.sha, font: .systemFont(ofSize: 16, weight: .semibold), textColor: .gray)
+            .append(commit.detail.message, font: .systemFont(ofSize: 14, weight: .regular), textColor: .lightGray)
     }
 }
