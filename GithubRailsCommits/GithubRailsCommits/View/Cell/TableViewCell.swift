@@ -64,4 +64,6 @@ final class TableViewCell: UITableViewCell {
             .append(commit.detail.message, font: .systemFont(ofSize: 14, weight: .regular), textColor: .lightGray)
         commitDetailsLabel.attributedText = attributedText
     }
+
+    func feedNone() {}
 }
