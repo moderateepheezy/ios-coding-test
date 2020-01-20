@@ -54,15 +54,6 @@ class ViewController: UIViewController {
     }
 }
 
-extension UIViewController {
-
-    func setAlert(title: String?, message: String?) {
-        let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertViewController, animated: true)
-    }
-}
-
 extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

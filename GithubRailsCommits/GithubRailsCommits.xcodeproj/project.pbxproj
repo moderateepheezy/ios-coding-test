@@ -16,6 +16,7 @@
 		94A0FD6E23D5E8F600D18353 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD6D23D5E8F600D18353 /* String+Extension.swift */; };
 		94A0FD7023D5E99A00D18353 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD6F23D5E99A00D18353 /* Model.swift */; };
 		94A0FD7923D5EB0900D18353 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD7823D5EB0900D18353 /* TableViewCell.swift */; };
+		94A0FD7B23D5F9D800D18353 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD7A23D5F9D800D18353 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		94A0FD6D23D5E8F600D18353 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		94A0FD6F23D5E99A00D18353 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		94A0FD7823D5EB0900D18353 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		94A0FD7A23D5F9D800D18353 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				94A0FD6D23D5E8F600D18353 /* String+Extension.swift */,
+				94A0FD7A23D5F9D800D18353 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				94A0FD5E23D5E00D00D18353 /* ViewController.swift in Sources */,
 				94A0FD5A23D5E00D00D18353 /* AppDelegate.swift in Sources */,
 				94A0FD7923D5EB0900D18353 /* TableViewCell.swift in Sources */,
+				94A0FD7B23D5F9D800D18353 /* UIViewController+Extension.swift in Sources */,
 				94A0FD5C23D5E00D00D18353 /* SceneDelegate.swift in Sources */,
 				94A0FD6E23D5E8F600D18353 /* String+Extension.swift in Sources */,
 			);
