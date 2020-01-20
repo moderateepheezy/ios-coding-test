@@ -14,16 +14,19 @@ final class TableViewCell: UITableViewCell {
         let label = UILabel()
         label.text = "Title Text"
         label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        config()
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        config()
     }
 
     private func config() {
