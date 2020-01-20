@@ -9,6 +9,6 @@ Please document your solution here
 4. Cache
 5. Improve on the User Interface/Design.
 6. When a commit is tapped, open the url to the commit in a browser
-7. Lazy loading of data(pagination).
+7. Complete implementation of Lazy loading of data(pagination).
 
 
