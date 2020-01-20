@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    let githubRequest = GithubRequest()
+
     var commits = [Commit]()
 
     override func viewDidLoad() {
@@ -29,28 +31,20 @@ class ViewController: UIViewController {
     }
 
     func fetchCommits() {
+        
         tableView.refreshControl?.beginRefreshing()
-        guard
-            let url = URL(string: "https://api.github.com/repos/rails/rails/commits")
-        else { return }
-        URLSession.shared.dataTask(with: url) {[weak self] (data, response, error) in
-            DispatchQueue.main.async {
-                self?.tableView.refreshControl?.endRefreshing()
 
-                guard let data = data else {
-                    self?.setAlert(title: "Response Error", message: error?.localizedDescription)
-                    return
-                }
-                do {
-                    let commitData = try JSONDecoder().decode(Commits.self, from: data)
-                    self?.commits = commitData
-                    self?.tableView.reloadData()
-                } catch let error {
-                    print(error.localizedDescription)
-                    self?.setAlert(title: "Codable Error", message: error.localizedDescription)
-                }
+        githubRequest.fetchRailsCommits {[weak self] commits, errorMessage in
+            self?.tableView.refreshControl?.endRefreshing()
+
+            guard let commits = commits else {
+                self?.setAlert(title: "Response Error", message: errorMessage)
+                return
             }
-        }.resume()
+
+            self?.commits = commits
+            self?.tableView.reloadData()
+        }
     }
 }
 

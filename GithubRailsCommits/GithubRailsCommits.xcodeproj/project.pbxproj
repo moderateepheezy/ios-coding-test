@@ -17,6 +17,13 @@
 		94A0FD7023D5E99A00D18353 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD6F23D5E99A00D18353 /* Model.swift */; };
 		94A0FD7923D5EB0900D18353 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD7823D5EB0900D18353 /* TableViewCell.swift */; };
 		94A0FD7B23D5F9D800D18353 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD7A23D5F9D800D18353 /* UIViewController+Extension.swift */; };
+		94A0FD7E23D5FAAA00D18353 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD7D23D5FAAA00D18353 /* NetworkRequest.swift */; };
+		94A0FD8123D5FD5600D18353 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8023D5FD5600D18353 /* GithubRequest.swift */; };
+		94A0FD8323D5FD9300D18353 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8223D5FD9300D18353 /* RequestFactory.swift */; };
+		94A0FD8523D5FEE700D18353 /* NSError+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8423D5FEE700D18353 /* NSError+Extension.swift */; };
+		94A0FD8823D5FF2000D18353 /* URLParameretersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8723D5FF2000D18353 /* URLParameretersEncoder.swift */; };
+		94A0FD8A23D5FF3800D18353 /* JSONParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8923D5FF3800D18353 /* JSONParametersEncoder.swift */; };
+		94A0FD8C23D5FF5800D18353 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FD8B23D5FF5800D18353 /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		94A0FD6F23D5E99A00D18353 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		94A0FD7823D5EB0900D18353 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		94A0FD7A23D5F9D800D18353 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		94A0FD7D23D5FAAA00D18353 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		94A0FD8023D5FD5600D18353 /* GithubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		94A0FD8223D5FD9300D18353 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		94A0FD8423D5FEE700D18353 /* NSError+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Extension.swift"; sourceTree = "<group>"; };
+		94A0FD8723D5FF2000D18353 /* URLParameretersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameretersEncoder.swift; sourceTree = "<group>"; };
+		94A0FD8923D5FF3800D18353 /* JSONParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParametersEncoder.swift; sourceTree = "<group>"; };
+		94A0FD8B23D5FF5800D18353 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,7 @@
 				94A0FD7223D5EA0400D18353 /* View */,
 				94A0FD7623D5EADD00D18353 /* Model */,
 				94A0FD7423D5EAAD00D18353 /* Helper */,
+				94A0FD7C23D5FA9800D18353 /* Services */,
 				94A0FD6723D5E00F00D18353 /* Info.plist */,
 			);
 			path = GithubRailsCommits;
@@ -115,6 +130,7 @@
 			children = (
 				94A0FD6D23D5E8F600D18353 /* String+Extension.swift */,
 				94A0FD7A23D5F9D800D18353 /* UIViewController+Extension.swift */,
+				94A0FD8423D5FEE700D18353 /* NSError+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +149,35 @@
 				94A0FD7823D5EB0900D18353 /* TableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		94A0FD7C23D5FA9800D18353 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				94A0FD7F23D5FD2E00D18353 /* GithubRequest */,
+				94A0FD8623D5FF0200D18353 /* CustomEncoders */,
+				94A0FD7D23D5FAAA00D18353 /* NetworkRequest.swift */,
+				94A0FD8223D5FD9300D18353 /* RequestFactory.swift */,
+				94A0FD8B23D5FF5800D18353 /* HTTPMethod.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		94A0FD7F23D5FD2E00D18353 /* GithubRequest */ = {
+			isa = PBXGroup;
+			children = (
+				94A0FD8023D5FD5600D18353 /* GithubRequest.swift */,
+			);
+			path = GithubRequest;
+			sourceTree = "<group>";
+		};
+		94A0FD8623D5FF0200D18353 /* CustomEncoders */ = {
+			isa = PBXGroup;
+			children = (
+				94A0FD8723D5FF2000D18353 /* URLParameretersEncoder.swift */,
+				94A0FD8923D5FF3800D18353 /* JSONParametersEncoder.swift */,
+			);
+			path = CustomEncoders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,11 +253,18 @@
 			files = (
 				94A0FD7023D5E99A00D18353 /* Model.swift in Sources */,
 				94A0FD5E23D5E00D00D18353 /* ViewController.swift in Sources */,
+				94A0FD8C23D5FF5800D18353 /* HTTPMethod.swift in Sources */,
+				94A0FD7E23D5FAAA00D18353 /* NetworkRequest.swift in Sources */,
+				94A0FD8123D5FD5600D18353 /* GithubRequest.swift in Sources */,
 				94A0FD5A23D5E00D00D18353 /* AppDelegate.swift in Sources */,
+				94A0FD8823D5FF2000D18353 /* URLParameretersEncoder.swift in Sources */,
 				94A0FD7923D5EB0900D18353 /* TableViewCell.swift in Sources */,
+				94A0FD8523D5FEE700D18353 /* NSError+Extension.swift in Sources */,
+				94A0FD8323D5FD9300D18353 /* RequestFactory.swift in Sources */,
 				94A0FD7B23D5F9D800D18353 /* UIViewController+Extension.swift in Sources */,
 				94A0FD5C23D5E00D00D18353 /* SceneDelegate.swift in Sources */,
 				94A0FD6E23D5E8F600D18353 /* String+Extension.swift in Sources */,
+				94A0FD8A23D5FF3800D18353 /* JSONParametersEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
