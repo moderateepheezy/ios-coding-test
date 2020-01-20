@@ -10,11 +10,59 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
 }
 
+
+final class TableViewCell: UITableViewCell {
+
+    private lazy var commitDetailsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Title Text"
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func config() {
+        setupHeirachys()
+        setupConstraints()
+    }
+
+    private func setupHeirachys() {
+        addSubview(commitDetailsLabel)
+    }
+
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            commitDetailsLabel
+                .topAnchor
+                .constraint(equalTo: topAnchor, constant: 20),
+            commitDetailsLabel
+                .leadingAnchor
+                .constraint(equalTo: leadingAnchor, constant: 20),
+            commitDetailsLabel
+                .trailingAnchor
+                .constraint(equalTo: trailingAnchor, constant: -20),
+            commitDetailsLabel
+                .bottomAnchor
+                .constraint(equalTo: bottomAnchor, constant: -20)
+        ])
+    }
+
+    func feed(commit: String) {
+    }
+}
