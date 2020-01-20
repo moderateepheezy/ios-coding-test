@@ -23,19 +23,15 @@ struct Commit: Codable {
 struct CommitDetail: Codable {
     let author: CommitAuthor
     let message: String
-    let url: String
-    let commentCount: Int
 
     enum CodingKeys: String, CodingKey {
-        case author, message, url
-        case commentCount = "comment_count"
+        case author, message
     }
 }
 
 // MARK: - CommitAuthor
 struct CommitAuthor: Codable {
-    let name, email: String
-    let date: Date
+    let name: String
 }
 
 

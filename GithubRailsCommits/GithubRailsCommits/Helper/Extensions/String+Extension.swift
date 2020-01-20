@@ -13,8 +13,11 @@ extension NSMutableAttributedString {
     @discardableResult func append(
         _ text: String,
         font: UIFont,
-        textColor: UIColor) -> NSMutableAttributedString {
-        let attrs: [NSAttributedString.Key: Any] = [.font: font, .foregroundColor: textColor]
+        textColor: UIColor,
+        lineSpacing: CGFloat = 0) -> NSMutableAttributedString {
+        let paragraphStype = NSMutableParagraphStyle()
+        paragraphStype.lineSpacing = lineSpacing
+        let attrs: [NSAttributedString.Key: Any] = [.font: font, .foregroundColor: textColor, NSAttributedString.Key.paragraphStyle: paragraphStype]
         let textString = NSMutableAttributedString(string: text, attributes: attrs)
         append(textString)
         return self

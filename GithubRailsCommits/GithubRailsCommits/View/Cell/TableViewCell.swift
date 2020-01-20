@@ -12,9 +12,8 @@ final class TableViewCell: UITableViewCell {
 
     private lazy var commitDetailsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Title Text"
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.textColor = .black
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -58,8 +57,11 @@ final class TableViewCell: UITableViewCell {
     func feed(commit: Commit) {
         let attributedText = NSMutableAttributedString()
         attributedText
-            .append(commit.detail.author.name, font: .systemFont(ofSize: 18, weight: .bold), textColor: .darkGray)
-            .append(commit.sha, font: .systemFont(ofSize: 16, weight: .semibold), textColor: .gray)
+            .append(commit.detail.author.name, font: .systemFont(ofSize: 18, weight: .bold), textColor: .darkGray, lineSpacing: 0)
+            .append("\n\n" + "Commit: ", font: .systemFont(ofSize: 14, weight: .semibold), textColor: .black)
+            .append(commit.sha, font: .systemFont(ofSize: 14, weight: .semibold), textColor: .gray, lineSpacing: 0)
+            .append("\n\n" + "Message: ", font: .systemFont(ofSize: 14, weight: .regular), textColor: .black)
             .append(commit.detail.message, font: .systemFont(ofSize: 14, weight: .regular), textColor: .lightGray)
+        commitDetailsLabel.attributedText = attributedText
     }
 }
